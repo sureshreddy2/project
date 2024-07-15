@@ -1,0 +1,93 @@
+pipeline {
+    agent any
+    tools {
+        nodejs 'nodejs'
+    }
+    environment {
+        SCANNER_HOME = tool 'sonar'
+    }
+    stages {
+        stage('Cleanup existing Docker resources') {
+            steps {
+                // Stop and remove existing container if it exists
+                sh 'docker stop angular || true'
+                sh 'docker rm angular || true'
+                
+                // Remove existing image if it exists
+                sh 'docker rmi sureshr29/angular:latest || true'
+            }
+        }
+
+        stage('workspace clean') {
+            steps {
+                cleanWs()
+            }
+        }
+        stage('check out from git') {
+            steps {
+                git 'https://github.com/sureshreddy2/Angular.git'
+            }
+        }
+        stage('Install Dependencies') {
+            steps {
+                // Install Angular dependencies
+                dir('/var/lib/jenkins/workspace/angular') {
+                    sh 'npm install -g @angular/cli@12.2.8'
+                    sh 'npm install'
+                }
+            }
+        }
+        stage('sonar analysis') {
+            steps {
+                withSonarQubeEnv('sonar-token') {
+                    sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=Angular \
+                     -Dsonar.projectKey=Angular '''
+
+                }
+            }
+
+        }
+        stage("quality gate") {
+            steps {
+                script {
+                    waitForQualityGate abortPipeline: false, credentialsId: 'Sonar-token'
+                }
+            }
+        }
+        stage('OWASP FS SCAN') {
+            steps {
+                dependencyCheck additionalArguments: '--scan ./ --disableYarnAudit --disableNodeAudit', odcInstallation: 'DP-CHECK'
+                dependencyCheckPublisher pattern: '**/dependency-check-report.xml'
+            }
+        }
+        stage('TRIVY FS SCAN') {
+            steps {
+                sh "trivy fs . > trivyfs.txt"
+            }
+        }
+        stage('docker push and pull') {
+            steps {
+                script {
+                    withDockerRegistry(credentialsId: 'docker', toolName: 'docker') {
+                        sh 'docker build -t angular .'
+                        sh 'docker tag angular sureshr29/angular:latest'
+                        sh 'docker push sureshr29/angular:latest'
+                    }
+
+                }
+            }
+        }
+        stage('trivy') {
+            steps {
+                sh ' trivy image sureshr29/angular:latest > trivy.text '
+            }
+
+        }
+        stage('deploy to container') {
+            steps {
+                sh ' docker run -d --name angular -p 3000:4200 sureshr29/angular:latest '
+            }
+        }
+    }
+}
+

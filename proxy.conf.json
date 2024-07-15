@@ -1,0 +1,8 @@
+{
+  "/api": {
+    "target": "http://52.66.29.227:80",  // Replace with your backend server address and port
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}

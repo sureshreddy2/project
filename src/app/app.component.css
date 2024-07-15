@@ -1,0 +1,309 @@
+.searchcomponent {
+    position: relative;   
+}
+.inputbar{
+    width: 750px;
+    max-width: 80% !important;
+    border-radius: 5px 0 0 5px;
+    box-shadow: none;
+    border: 1px solid #e42b26;
+    padding: 5px 15px;
+    height: 38px;
+    border-radius: 5px 0 0 5px !important;
+    outline: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* * {
+    margin: 0;
+    padding: 0;
+}
+* {
+    box-sizing: border-box;
+}
+
+.searchcomponent {
+    position: relative;
+   
+}
+.inputbar {
+    width: 750px;
+    border-radius: 5px 0 0 5px;
+    max-width: 80% !important;
+    padding: 6px;
+    border: 1px solid #e42b26;
+    padding: 5px 15px;
+    box-shadow: none;
+    height: 38px;
+    border-radius: 5px 0 0 5px !important;
+    outline: 0;
+}
+.search {
+    border-radius: 0 5px 5px 0;
+    color: #fff;
+    vertical-align: top;
+    margin-top: 0px;
+    float: right;
+}
+.sprite.search-btn {
+    background-position: 0 -80px;
+    width: 26px;
+    height: 22px;
+}
+span.search input {
+    border: none;
+    background: #e42b26 url(https://www.flaticon.com/free-icon-font/search_3917132) no-repeat center !important;
+    padding: 16px 15px;
+    background-size: 20px 19px !important;
+    position: relative;
+    height: 38px !important;
+    width: 43px !important;
+    vertical-align: top;
+    border-radius: 0 5px 5px 0;
+}
+.search-btn {
+    float: left;
+    position: absolute;
+    right: 5px;
+    z-index: 1;
+    cursor: pointer;
+    border: 0;
+    background: 0 0;
+}
+
+
+.list-inline, .list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+.m-0 {
+    margin: 0!important;
+}
+.position-relative {
+    position: relative!important;
+}
+
+.list-inline-item:not(:last-child) {
+    margin-right: 0.5rem;
+}
+.text-center {
+    text-align: center;
+}
+
+.list-inline-item, output {
+    display: inline-block;
+}
+
+.usernametext {
+    background: 0 0;
+    border: 1px solid #e42b26;
+    border-radius: 5px 0 0 5px;
+    height: 33px;
+    vertical-align: top;
+    padding: 0 10px !important;
+    color: #707070;
+    width: 230px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 32px;
+    margin-right: -5px;
+    text-align: left;
+    cursor: pointer;
+}
+
+input, label, ol, p, span, table, ul {
+    font-family: Lato,sans-serif;
+}
+
+.accountred {
+    background: #e42b26;
+    padding: 0 3px;
+    display: inline-block;
+    border-radius: 0 5px 5px 0;
+}
+
+.text-white {
+    color: #fff!important;
+}
+
+.signreflink img {
+    width: 46px;
+}
+
+img {
+    border: none;
+}
+img {
+    max-width: 100%;
+} */
+
+/* .userpopup {
+    position: absolute;
+    overflow: visible !important;
+    padding: 14px;
+    margin: 0;
+    user-select: none;
+    zoom: 1;
+    font-size: 13px;
+    font-family: inherit;
+    line-height: normal;
+    width: 250px;
+    left: -14px;
+    top: 27px;
+    display: none;
+}
+
+.userpopupinside {
+    background: #fff;
+    border: 1px solid #bbb;
+    padding: 14px;
+    border-radius: 5px;
+} */
+
+/* .nav-arrow {
+    border-style: solid;
+    border-width: 9px;
+    border-color: transparent;
+    border-top-width: 0;
+    border-bottom: 9px solid #707070;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0; */
+    /* position: absolute;
+    top: -9px; */
+/* } */
+/* 
+@media only screen and (max-width: 768px) */
+/* .userpopup #ctl00_divLogin, .userpopup .list-unstyled {
+    display: block !important;
+}
+
+.userpopup a.themebackground {
+    color: #fff !important;
+}
+a:link, a:visited {
+    color: #08d;
+    text-decoration: none;
+    cursor: pointer;
+}
+.userpopup a {
+    color: #000 !important;
+    font-size: 16px;
+    line-height: 26px;
+}
+.themebackground {
+    background: #d51912 !important;
+    width: 100%;
+    z-index: 99;
+}
+.pt-1, .py-1 {
+    padding-top: 0.25rem!important;
+}
+.pb-1, .py-1 {
+    padding-bottom: 0.25rem!important;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn, .form-control {
+    padding: 0.375rem 0.75rem; */
+    /* font-size: 1rem;
+    line-height: 1.5; */
+/* }
+
+.btn, .btn-link, .dropdown-item, .small, small {
+    font-weight: 400;
+}
+.btn, img {
+    vertical-align: middle;
+}
+.userpopup a.themecolor {
+    color: #d51912 !important;
+}
+a:link, a:visited {
+    color: #08d;
+    text-decoration: none;
+    cursor: pointer;
+}
+.userpopup a {
+    color: #000 !important;
+    font-size: 16px;
+    line-height: 26px;
+}
+.themecolor {
+    color: #d51912 !important;
+}
+.themecolor {
+    color: #d51912 !important;
+} */
+/* @media only screen and (max-width: 768px) */
+/* .headersignuplink {
+    display: block;
+    text-align: center;
+}
+.headersignuplink {
+    line-height: 20px !important;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.mb-1, .my-1 {
+    margin-bottom: 0.25rem!important;
+} */
+
+/* @media only screen and (max-width: 768px) */
+/* .userpopup #ctl00_divLogin, .userpopup .list-unstyled {
+    display: block !important;
+} */
+/* @media (max-width: 640px) */
+/* .list-unstyled {
+    display: none;
+}
+.list-unstyled {
+    list-style-type: none;
+}
+.text-center {
+    text-align: center;
+}
+.list-inline, .list-unstyled {
+    padding-left: 0;
+    list-style: none;
+} */
